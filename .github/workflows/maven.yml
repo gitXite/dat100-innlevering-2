@@ -2,7 +2,7 @@ name: Check DAT100 Java Innlevering 2 using CI with Maven
 
 on:
   push:
-    branches: [ "main", "tabeller/daniel" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
