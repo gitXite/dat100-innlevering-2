@@ -3,7 +3,8 @@ package no.hvl.dat100.tabeller;
 public class Tabeller {
 
 	// a)
-	public static void skrivUt(int[] tabell) {		
+	public static void skrivUt(int[] tabell) {
+		System.out.println();
 		System.out.print("Tall i tabell:");
 		for (int tall : tabell) {
 			System.out.print(" " + tall);
