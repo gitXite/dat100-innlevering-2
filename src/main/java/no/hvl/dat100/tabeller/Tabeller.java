@@ -4,11 +4,12 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		System.out.println();
+		System.out.println("----------");
 		System.out.print("Tall i tabell:");
 		for (int tall : tabell) {
 			System.out.print(" " + tall);
-		}		
+		}
+		System.out.println("\n----------");
 	}
 
 	// b)
