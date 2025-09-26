@@ -32,17 +32,22 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int sum = 0;
+		for (int tall : tabell) {
+			sum += tall;
+		}
+		
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		for (int i = 0; i < tabell.length; i++) {
+			if (tabell[i] == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
