@@ -15,10 +15,19 @@ public class Tabeller {
 	}
 
 	// b)
-	public static String tilStreng(int[] tabell) {
+	public static String tilStreng(int[] tabell) {		
+		StringBuilder sb = new StringBuilder();
+		sb.append("[");
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			sb.append(tabell[i]);
+			if (i < tabell[i] - 1) {
+				sb.append(",");
+			}
+		}
+		sb.append("]");
+
+		return sb.toString();
 	}
 
 	// c)
