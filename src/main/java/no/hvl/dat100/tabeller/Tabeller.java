@@ -26,7 +26,6 @@ public class Tabeller {
 			}
 		}
 		sb.append("]");
-
 		return sb.toString();
 	}
 
@@ -36,7 +35,6 @@ public class Tabeller {
 		for (int tall : tabell) {
 			sum += tall;
 		}
-		
 		return sum;
 	}
 
@@ -74,16 +72,27 @@ public class Tabeller {
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			if (i < tabell.length - 1 && tabell[i] > tabell[i + 1]) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+		int[] resTabell = new int[tabell1.length + tabell2.length];
+		int index = 0;
+		
+		for (int i = 0; i < resTabell.length; i++) {
+			if (i < tabell1.length) {
+				resTabell[i] = tabell1[i];
+			} else {
+				resTabell[i] = tabell2[index];
+				index++;
+			}
+		}
+		return resTabell;
 	}
 }
