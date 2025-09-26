@@ -21,7 +21,7 @@ public class Tabeller {
 
 		for (int i = 0; i < tabell.length; i++) {
 			sb.append(tabell[i]);
-			if (i < tabell[i] - 1) {
+			if (i < tabell.length - 1) {
 				sb.append(",");
 			}
 		}
