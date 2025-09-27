@@ -2,7 +2,7 @@ name: Check DAT100 Java Innlevering 2 using CI with Maven
 
 on:
   push:
-    branches: [ "matriser/daniel" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -21,8 +21,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots compile
-    - name: Test Matriser
-      run: mvn --batch-mode --update-snapshots test -Dtest=MatriserEnhetsTests
     - name: Test Tabeller
       run: mvn --batch-mode --update-snapshots test -Dtest=TabellerEnhetsTests
+    - name: Test Matriser
+      run: mvn --batch-mode --update-snapshots test -Dtest=MatriserEnhetsTests
     
