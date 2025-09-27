@@ -47,7 +47,7 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 		// robust null sjekk og tidlig return
-		if ((a == null || a.length == 0) && (b == null || b.length == 0) return true;
+		if ((a == null || a.length == 0) && (b == null || b.length == 0)) return true;
 		if (a == null || b == null || a.length == 0 || b.length == 0) return false;
 		if (a.length != b.length) return false;
 
