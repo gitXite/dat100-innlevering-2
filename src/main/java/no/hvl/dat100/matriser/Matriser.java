@@ -32,9 +32,10 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
+		// null sjekk for å trygt bruke index, antar symmetrisk matrise
 		if (matrise == null || matrise.length == 0 || matrise[0].length == 0) return new int[0][0];
+		
 		int[][] resMatrise = new int[matrise.length][matrise[0].length];
-
 		for (int i = 0; i < matrise.length; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
 				resMatrise[i][j] = matrise[i][j] * tall;
@@ -45,10 +46,19 @@ public class Matriser {
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
+		// robust null sjekk og tidlig return
+		if ((a == null || a.length == 0) && (b == null || b.length == 0) return true;
+		if (a == null || b == null || a.length == 0 || b.length == 0) return false;
+		if (a.length != b.length) return false;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-		
+		for (int i = 0; i < a.length; i++) {
+			if (a[i].length != b[i].length) return false;
+			
+			for (int j = 0; j < a[i].length; j++) {
+				if (a[i][j] != b[i][j]) return false;
+			}
+		}
+		return true;
 	}
 	
 	// e)
