@@ -2,51 +2,75 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 
-	// a)
-	public static void skrivUt(int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-	}
+    // a)
 
-	// b)
-	public static String tilStreng(int[][] matrise) {
+    public static void skrivUt(int[][] matrise){
+        for (int[] i : matrise){
+            for (int t : i){
+                System.out.print(t + " ");
+            }
+        }
+    }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-		
-	}
+    // b)
 
-	// c)
-	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
-	}
+    public static String tilStreng(int[][] matrise) {
+        StringBuilder s1 = new StringBuilder();
 
-	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+        for(int i = 0 ; i < matrise.length; i++) {
+            for (int k = 0; k < matrise[i].length; k++) {
+                s1.append(matrise[i][k]);
+                if (k < matrise[i].length - 1){
+                    s1.append(" ");
+                }
+            }
+            s1.append("\n");
+        }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-		
-	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
+        return s1.toString();
+    }
 
-		// TODO
+    // c)
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-	
-	}
+    public static int[][] skaler(int tall, int[][] matrise) {
+        int rader = matrise.length;
+        int kolonner = matrise[0].length;
 
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
-	}
+        int[][] nyMatrise = new int[rader][kolonner];
+
+
+        for (int i = 0; i < rader; i++) {
+            for (int j = 0; j < kolonner; j++) {
+                nyMatrise[i][j] = matrise[i][j] * tall;
+            }
+        }
+
+        return nyMatrise;
+    }
+
+    // d)
+    public static boolean erLik(int[][] a, int[][] b) {
+
+        // TODO
+        throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+
+    }
+
+    // e)
+    public static int[][] speile(int[][] matrise) {
+
+        // TODO
+
+        throw new UnsupportedOperationException("Metoden speile ikke implementert");
+
+    }
+
+    // f)
+    public static int[][] multipliser(int[][] a, int[][] b) {
+
+        // TODO
+        throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
+
+    }
 }
