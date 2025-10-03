@@ -21,9 +21,9 @@ public class Matriser {
 		for (int i = 0; i < matrise.length; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
 				if (j < matrise[i].length - 1) {
-					sb.append(matrise[i][j] + " ");
+					sb.append(matrise[i][j]).append(" ");
 				} else {
-					sb.append(matrise[i][j] + " \n");
+					sb.append(matrise[i][j]).append(" \n");
 				}
 			}
 		}
@@ -34,9 +34,12 @@ public class Matriser {
 	public static int[][] skaler(int tall, int[][] matrise) {
 		// null sjekk for å trygt bruke index, antar at radene er like store
 		if (matrise == null || matrise.length == 0 || matrise[0].length == 0) return new int[0][0];
+
+        int rader = matrise.length;
+        int kolonner = matrise[0].length;
 		
-		int[][] resMatrise = new int[matrise.length][matrise[0].length];
-		for (int i = 0; i < matrise.length; i++) {
+		int[][] resMatrise = new int[rader][kolonner];
+		for (int i = 0; i < rader; i++) {
 			for (int j = 0; j < matrise[i].length; j++) {
 				resMatrise[i][j] = matrise[i][j] * tall;
 			}
